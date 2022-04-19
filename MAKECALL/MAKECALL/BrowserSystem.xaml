@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAKECALL.BrowserSystem">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout BackgroundColor="Orange">
+                <Label Text="Enter Url for Browse"  FontSize="Medium"  TextColor="White" HorizontalOptions="Center"/>
+                <Entry Text="" x:Name="entryUrl" TextColor="White"/>
+                <Button BackgroundColor="Teal" Text="Browse" Clicked="btnBrowse_Clicked" x:Name="btnBrowse" Background="gray" TextColor="black"/>
+                <StackLayout>
+                    <ScrollView>
+                        <StackLayout>
+                            <ActivityIndicator x:Name="progress" IsEnabled="True" IsVisible="false" IsRunning="False" Color="RoyalBlue" HorizontalOptions="Center" ></ActivityIndicator>
+                            <WebView x:Name="browser" HeightRequest="1000" Navigating="browser_Navigating"  Navigated="browser_Navigated" VerticalOptions="FillAndExpand">
+
+                            </WebView>
+                        </StackLayout>
+
+                    </ScrollView>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

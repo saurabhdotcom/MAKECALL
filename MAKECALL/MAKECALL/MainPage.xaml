@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAKECALL.MainPage" Background="black">
+
+    <StackLayout>
+        <Button  Text="Call" x:Name="BtnCall" Clicked="BtnCall_Clicked" />
+        <Button  Text="Browser" x:Name="BtnBrowser" Clicked="BtnBrowser_Clicked" />
+        <Button  Text="Barcode Reading" x:Name="BtnBarcodeReading" Clicked="BtnBarcodeReading_Clicked" />
+        <Button  Text="Take Picture" x:Name="BtnTakePicture" Clicked="BtnTakePicture_Clicked" />
+    </StackLayout>
+
+</ContentPage>
