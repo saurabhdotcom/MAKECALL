@@ -42,5 +42,10 @@ namespace MAKECALL
         {
             await Navigation.PushAsync(new SqlLiteSystem());
         }
+
+        private void BtnPopup_Clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }

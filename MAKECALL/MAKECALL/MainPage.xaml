@@ -9,6 +9,7 @@
         <Button  Text="Barcode Reading" Background="Teal" TextColor="White"  x:Name="BtnBarcodeReading" Clicked="BtnBarcodeReading_Clicked" />
         <Button  Text="Take Picture"  Background="Teal" TextColor="White" x:Name="BtnTakePicture" Clicked="BtnTakePicture_Clicked" />
         <Button  Text="SQl Lite" Background="Teal" TextColor="White"  x:Name="BtnSqlLite" Clicked="BtnSqlLite_Clicked" />
+        <Button  Text="Popup" Background="Teal" TextColor="White"  x:Name="BtnPopup" Clicked="BtnPopup_Clicked" />
     </StackLayout>
 
 </ContentPage>
