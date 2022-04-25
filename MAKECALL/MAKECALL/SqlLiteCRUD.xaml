@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAKECALL.SqlLiteCRUD" BackgroundColor="White">
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <Label Text="Employee Name :" TextColor="Gray"/>
+            <Entry Placeholder="Employee Name" x:Name="entryName" VerticalOptions="Start" Margin="0,10,0,0" TextColor="Gray"  HorizontalOptions="FillAndExpand"  />
+            <Label Text="Email :" TextColor="Gray" Margin="0,10,0,0"/>
+            <Entry Placeholder="Email" x:Name="entryEmail" VerticalOptions="Start"  Margin="0,10,0,0" TextColor="Gray"  HorizontalOptions="FillAndExpand"  />
+            <Label Text="Password :" TextColor="Gray" Margin="0,10,0,0"/>
+            <Entry Placeholder="Password" x:Name="entryPassword" VerticalOptions="Start" Margin="0,10,0,0" TextColor="Gray" IsPassword="True"  HorizontalOptions="FillAndExpand"  />
+            <Label Text="Mobile :" TextColor="Gray" Margin="0,10,0,0"/>
+            <Entry Placeholder="Mobile"  x:Name="entryMobile" VerticalOptions="Start"  Margin="0,10,0,0" TextColor="Gray"  HorizontalOptions="FillAndExpand"  />
+            <Button BackgroundColor="Teal" x:Name="BtnSave" Clicked="BtnSave_Clicked" TextColor="White" Margin="0,10,0,0" Text="Save"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

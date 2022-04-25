@@ -11,6 +11,7 @@ namespace MAKECALL
 {
     public partial class MainPage : ContentPage
     {
+        //saurabh1.0
         public MainPage()
         {
             InitializeComponent();
@@ -35,6 +36,11 @@ namespace MAKECALL
         private async void BtnTakePicture_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new TakePictureSystem());
+        }
+
+        private async void BtnSqlLite_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new SqlLiteSystem());
         }
     }
 }

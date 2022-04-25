@@ -17,7 +17,7 @@ namespace MAKECALL
         {
             InitializeComponent();
         }
-
+        
         private async void BtnTakePicture_Clicked(object sender, EventArgs e)
         {
             await CrossMedia.Current.Initialize();
@@ -43,7 +43,7 @@ namespace MAKECALL
                 {
                     return;
                 }
-                await DisplayAlert("FilePath",file.Path,"OK");
+                DependencyService.Get<IMessage>().Longtime("FilePath :"+file.Path.ToString());
                 ImgPicture.Source = ImageSource.FromStream(() =>
                 {
                     var stream = file.GetStream();

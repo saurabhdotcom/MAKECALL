@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MAKECALL.PhoneCallSystem">
+             x:Class="MAKECALL.PhoneCallSystem" Title="Calling System">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Make a phone call" FontSize="Medium"  TextColor="White" HorizontalOptions="Center"/>
-            <Entry Text="" BackgroundColor="Gray" x:Name="entryNumber" TextColor="White" Placeholder="Number"  Margin="0,30,0,0" />
-            <Button Text="Call" x:Name="makeCall"  Clicked="makeCall_Clicked"/>
+        <StackLayout Padding="10">
+            <Label Text="Make a phone call" FontSize="Medium"  TextColor="Black" HorizontalOptions="Center"/>
+            <Entry Text=""  x:Name="entryNumber" TextColor="Black" Placeholder="Number"  Margin="0,30,0,0" />
+            <Button Text="Call" x:Name="makeCall"  Background="teal" TextColor="White" Clicked="makeCall_Clicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
