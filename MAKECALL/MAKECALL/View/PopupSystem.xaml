@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:eventToCommand="clr-namespace:MAKECALL.Behavior;assembly=MAKECALL"   
+             x:Class="MAKECALL.View.PopupSystem" x:Name="popsys" Title="Employee Management System">
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <SearchBar Text="{Binding SearchText}"  >
+                <SearchBar.Behaviors>
+                    <eventToCommand:EventToCommandBehavior EventName="TextChanged" Command="{Binding Path=BindingContext.TextChangedCommand , Source={x:Reference popsys} }" />
+                    <eventToCommand:EventToCommandBehavior EventName="SearchButtonPressed" Command="{Binding Path=BindingContext.SearchButtonPressedCommand , Source={x:Reference popsys}}" />
+                </SearchBar.Behaviors>
+            </SearchBar>
+            <Label Text="Record Not Found" IsVisible="{Binding IsVisualRecordNotFound}"/>
+            <ListView x:Name="listEmployee" HasUnevenRows = "true" ItemsSource="{Binding Path=BindingContext.SearchmployeeList , Source={x:Reference popsys}}"  SelectedItem="{Binding SelectedRecord}" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell >
+                            <ViewCell.ContextActions>
+                                <MenuItem x:Name="menuDelete"  Text="Delete"  Command="{Binding Path=BindingContext.DeleteRecordCommand, Source={x:Reference popsys}}" CommandParameter="{Binding .}" IsDestructive="True" />
+                            </ViewCell.ContextActions>
+                            <Grid Margin="0,5,0,0" >
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="auto"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Row="0" Text="{Binding EmployeeName ,StringFormat='Name :{0:F0}'}" HeightRequest="25" TextColor="Teal" FontSize="Small" FontAttributes="Bold"/>
+                                <Label Grid.Row="1" Text="{Binding Email ,StringFormat='Email Id :{0:F0}'}" HeightRequest="20" TextColor="Gray" FontSize="Small" FontAttributes="None"/>
+                                <Label Grid.Row="2" Text="{Binding Mobile ,StringFormat='Mobile Number :{0:F0}'}"  HeightRequest="20" TextColor="Gray" FontSize="Small" FontAttributes="None"/>
+
+                            </Grid>
+                        </ViewCell>
+
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                <ListView.Behaviors>
+                    <eventToCommand:EventToCommandBehavior EventName="ItemTapped" Command="{Binding ItemTapedCommand}" />
+                </ListView.Behaviors>
+            </ListView>
+            <Button x:Name="BtnAddNew" Text="Add New Employee"  Command="{Binding AddEmployeeCommand}" VerticalOptions="EndAndExpand" TextColor="White"  BackgroundColor="Teal" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

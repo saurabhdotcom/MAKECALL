@@ -1,4 +1,5 @@
 ﻿
+using MAKECALL.View;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -43,9 +44,9 @@ namespace MAKECALL
             await Navigation.PushAsync(new SqlLiteSystem());
         }
 
-        private void BtnPopup_Clicked(object sender, EventArgs e)
+        private async void BtnPopup_Clicked(object sender, EventArgs e)
         {
-
+            await Navigation.PushAsync(new PopupSystem());
         }
     }
 }
