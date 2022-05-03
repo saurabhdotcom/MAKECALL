@@ -11,7 +11,7 @@ namespace MAKECALL
         public App()
         {
             InitializeComponent();
-           
+            DependencyService.Register<IDesplayAlart, MessageService>();
             MainPage = new NavigationPage( new MainPage());
             
         }

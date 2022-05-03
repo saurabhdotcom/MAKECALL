@@ -48,5 +48,10 @@ namespace MAKECALL
         {
             await Navigation.PushAsync(new PopupSystem());
         }
+
+        private async void BtnjioLocatter_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new GeoLocater());
+        }
     }
 }

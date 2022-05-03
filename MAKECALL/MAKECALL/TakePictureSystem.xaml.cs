@@ -1,5 +1,7 @@
 ﻿using Plugin.Media;
 using Plugin.Media.Abstractions;
+using Plugin.Permissions;
+using Plugin.Permissions.Abstractions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,7 +23,8 @@ namespace MAKECALL
         private async void BtnTakePicture_Clicked(object sender, EventArgs e)
         {
             await CrossMedia.Current.Initialize();
-            if(!CrossMedia.Current.IsTakePhotoSupported&& !CrossMedia.Current.IsPickPhotoSupported)
+            
+            if (!CrossMedia.Current.IsTakePhotoSupported&& !CrossMedia.Current.IsPickPhotoSupported)
             {
                 await DisplayAlert("Picture","Photo Capture not supported!","OK");
                 return;

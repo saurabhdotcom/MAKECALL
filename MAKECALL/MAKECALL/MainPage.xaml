@@ -2,14 +2,15 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MAKECALL.MainPage" Background="White" Title="HomePage">
-
-    <StackLayout Padding="10">
-        <Button  Text="Call" Background="Teal" TextColor="White" x:Name="BtnCall" Clicked="BtnCall_Clicked" />
-        <Button  Text="Browser"  Background="Teal" TextColor="White" x:Name="BtnBrowser" Clicked="BtnBrowser_Clicked" />
-        <Button  Text="Barcode Reading" Background="Teal" TextColor="White"  x:Name="BtnBarcodeReading" Clicked="BtnBarcodeReading_Clicked" />
-        <Button  Text="Take Picture"  Background="Teal" TextColor="White" x:Name="BtnTakePicture" Clicked="BtnTakePicture_Clicked" />
-        <Button  Text="SQl Lite" Background="Teal" TextColor="White"  x:Name="BtnSqlLite" Clicked="BtnSqlLite_Clicked" />
-        <Button  Text="Popup" Background="Teal" TextColor="White"  x:Name="BtnPopup" Clicked="BtnPopup_Clicked" />
-    </StackLayout>
-
+    <ScrollView HeightRequest="100">
+        <StackLayout Padding="10">
+            <Button  Text="Call" Background="Teal" TextColor="White" x:Name="BtnCall" Clicked="BtnCall_Clicked" />
+            <Button  Text="Browser"  Background="Teal" TextColor="White" x:Name="BtnBrowser" Clicked="BtnBrowser_Clicked" />
+            <Button  Text="Barcode Reading" Background="Teal" TextColor="White"  x:Name="BtnBarcodeReading" Clicked="BtnBarcodeReading_Clicked" />
+            <Button  Text="Take Picture"  Background="Teal" TextColor="White" x:Name="BtnTakePicture" Clicked="BtnTakePicture_Clicked" />
+            <Button  Text="SQl Lite" Background="Teal" TextColor="White"  x:Name="BtnSqlLite" Clicked="BtnSqlLite_Clicked" />
+            <Button  Text="Popup" Background="Teal" TextColor="White"  x:Name="BtnPopup" Clicked="BtnPopup_Clicked" />
+            <Button  Text="Geo Locater" Background="Teal" TextColor="White"  x:Name="BtnjioLocatter" Clicked="BtnjioLocatter_Clicked" />
+        </StackLayout>
+    </ScrollView>
 </ContentPage>

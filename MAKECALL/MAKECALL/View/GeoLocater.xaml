@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAKECALL.View.GeoLocater">
+    <ContentPage.Content>
+        <StackLayout Margin="10">
+            <Button Text="Get Location" Command="{Binding GetLocationCommand}"/>
+            <StackLayout   VerticalOptions="Center" Margin="20,10" Background="Gray">
+                <Label Text="{Binding LocationSetting.Latitude , StringFormat='Latitude :{0:F0}' }"  TextColor="White" />
+                <Label Text="{Binding LocationSetting.Longitude ,StringFormat='Longitude :{0:F0}' }"  TextColor="White" />
+                <Label Text="{Binding LocationSetting.Distence , StringFormat='Distence :{0:F0}'}" TextColor="White" />
+            </StackLayout>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>
